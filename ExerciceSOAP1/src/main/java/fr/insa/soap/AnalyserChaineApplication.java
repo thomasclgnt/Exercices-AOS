@@ -9,7 +9,7 @@ public class AnalyserChaineApplication {
 	public static short port=8089;
 	
 	public void demarrerService() {
-		String url = "http://" + host + ":" + port + "/" ;
+		String url = "http://"+host+":"+port+"/" ;
 		Endpoint.publish(url, new AnalyserChaineWS()) ;
 	}
 	
