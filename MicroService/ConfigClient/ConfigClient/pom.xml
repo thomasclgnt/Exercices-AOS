@@ -5,13 +5,13 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>3.4.2</version>
+		<version>3.4.3</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>fr.insa.mas</groupId>
-	<artifactId>StudentInfoService</artifactId>
+	<groupId>fr.insa.ms.server.config</groupId>
+	<artifactId>ConfigClient</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>StudentInfoService</name>
+	<name>ConfigClient</name>
 	<description>Demo project for Spring Boot</description>
 	<url/>
 	<licenses>
@@ -35,27 +35,17 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-config</artifactId>
+		</dependency>
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-		
-		<dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
-<!--			/!\ ATTENTION : il a fallu changer la dependency de eureka-server à eureka-client pour que ça fonctionne-->
-		</dependency>
-		
-		<!--Ajout partie 6, on transforme StudentInfoService en client de notre serveur config-->
-		<dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-config</artifactId>
-		</dependency>
-
 	</dependencies>
-	
 	<dependencyManagement>
 		<dependencies>
 			<dependency>
